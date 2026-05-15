@@ -18,15 +18,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. 安装 Node.js
+      # 2. 安装 Node.js (升级为 20 或 22)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
-      # 3. 安装依赖
+      # 3. 安装依赖 (CI 环境推荐使用 npm ci 代替 npm install)
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       # 4. 构建前端（Vite + React）
       - name: Build Frontend
