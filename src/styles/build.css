@@ -1,0 +1,43 @@
+.build-scrollbar {
+  scrollbar-color: #333 transparent;
+}
+
+.build-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.build-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.build-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.build-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+.build-anim-slide-up {
+  animation: buildSlideUp 0.3s ease forwards;
+}
+
+@keyframes buildSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

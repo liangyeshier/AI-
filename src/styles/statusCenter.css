@@ -1,0 +1,38 @@
+.status-center-panel {
+  scrollbar-color: #333 transparent;
+}
+
+.status-center-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.status-center-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.status-center-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.status-center-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+.activity-item-enter {
+  animation: slideInDown 0.3s ease forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

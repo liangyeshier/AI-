@@ -1,0 +1,8 @@
+.markdown-body pre {
+  margin: 0;
+  background-color: transparent !important;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

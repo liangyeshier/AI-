@@ -1,0 +1,28 @@
+.markdown-body {
+  word-break: break-word;
+}
+
+.markdown-body pre {
+  margin: 0;
+  background-color: transparent !important;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.katex-display {
+  padding: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex {
+  font-size: 1.1em;
+  color: #d4af37;
+}

@@ -1,0 +1,23 @@
+.performance-panel-anim {
+  animation: perfFadeIn 0.5s ease forwards, perfPulseShadow 4s ease-in-out infinite alternate;
+}
+
+@keyframes perfPulseShadow {
+  from {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+  }
+}
+
+@keyframes perfFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
