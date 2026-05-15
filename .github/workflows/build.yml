@@ -1,0 +1,44 @@
+name: Build Electron Windows Installer
+
+# 当 push 到 main 分支或创建 pull request 时触发
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      # 1. 拉取仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. 安装 Node.js (升级为 20 或 22)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3. 安装依赖 (CI 环境推荐使用 npm ci 代替 npm install)
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. 构建前端（Vite + React）
+      - name: Build Frontend
+        run: npm run build
+
+      # 5. 打包 Electron Windows 安装包
+      - name: Build Electron Installer
+        run: npm run electron:build
+
+      # 6. 上传生成的安装包作为 artifact
+      - name: Upload Windows Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: ANSON-AI-Windows-Installer
+          path: dist_electron/
