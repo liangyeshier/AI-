@@ -38,7 +38,7 @@ jobs:
 
       # 6. 上传生成的安装包作为 artifact
       - name: Upload Windows Installer
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ANSON-AI-Windows-Installer
           path: dist_electron/
